@@ -7,15 +7,15 @@
     tools:context=".RegisterActivity">
 
     <EditText
-        android:id="@+id/ed_id"
+        android:id="@+id/et_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="아이디"
-        android:inputType="textPersonName"
+        android:hint="이메일"
+        android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -28,14 +28,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="비밀번호"
-        android:inputType="textPersonName"
+        android:hint="비밀번호(6자 이상)"
+        android:inputType="textPassword"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/ed_id"
+        app:layout_constraintEnd_toEndOf="@+id/et_email"
         app:layout_constraintHorizontal_bias="0.125"
-        app:layout_constraintStart_toStartOf="@+id/ed_id"
-        app:layout_constraintTop_toBottomOf="@+id/ed_id" />
+        app:layout_constraintStart_toStartOf="@+id/et_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
     <EditText
         android:id="@+id/et_name"
@@ -60,7 +61,7 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="나이"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="@+id/et_name"
         app:layout_constraintHorizontal_bias="0.0"
@@ -71,11 +72,33 @@
         android:id="@+id/btn_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="회원가입"
+        android:layout_marginTop="80dp"
+        android:text="가입완료"
         app:layout_constraintEnd_toEndOf="@+id/et_age"
-        app:layout_constraintHorizontal_bias="0.537"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/et_age"
         app:layout_constraintTop_toBottomOf="@+id/et_age" />
+
+    <Button
+        android:id="@+id/btn_man"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="16dp"
+        android:text="남자"
+        app:layout_constraintEnd_toStartOf="@+id/btn_woman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_age" />
+
+    <Button
+        android:id="@+id/btn_woman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="100dp"
+        android:text="여자"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_man"
+        app:layout_constraintTop_toBottomOf="@+id/et_age" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

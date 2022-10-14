@@ -7,15 +7,15 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/et_id"
+        android:id="@+id/et_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="200dp"
         android:layout_marginEnd="8dp"
         android:ems="10"
-        android:hint="아이디"
-        android:inputType="textPersonName"
+        android:hint="이메일"
+        android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -31,12 +31,12 @@
         android:layout_marginEnd="8dp"
         android:ems="10"
         android:hint="비밀번호"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/et_id"
+        app:layout_constraintEnd_toEndOf="@+id/et_email"
         app:layout_constraintHorizontal_bias="0.562"
-        app:layout_constraintStart_toStartOf="@+id/et_id"
-        app:layout_constraintTop_toBottomOf="@+id/et_id" />
+        app:layout_constraintStart_toStartOf="@+id/et_email"
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
     <Button
         android:id="@+id/btn_login"
@@ -54,9 +54,12 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="#2E2D30"
         android:text="회원가입"
+        app:iconTint="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/btn_login"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_login"
         app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
